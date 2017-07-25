@@ -1,0 +1,12 @@
+[Unit]
+Description=btscand
+After=bluetooth.target network.target
+
+[Service]
+Type=simple
+User=homeassistant
+ExecStart=/home/homeassistant/btscand/btscand
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
